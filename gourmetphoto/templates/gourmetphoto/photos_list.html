@@ -10,14 +10,14 @@
               <p class="card-text">{{record.title}}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" 
+                  onclick="location.href='{% url 'gourmetphoto:photo_detail' record.pk %}'">
+                  View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary" 
                     onclick="location.href='{% url 'gourmetphoto:gourmetphotos_cat' Category=record.Category.id %}'">
                     {{record.Category.title}}</button>
                 </div>
-                <a href="{% url 'gourmetphoto:user_list' user=record.uesr.id %}">
-                  <small class="text-muted">{{record.user.username}}</small>
-                </a>
+                <small class="text-muted">{{record.user.username}}</small>
               </div>
             </div>
           </div>
