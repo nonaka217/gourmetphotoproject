@@ -72,9 +72,9 @@ class PhotoDeleteView(DeleteView):
         return super().delete(request, *args, **kwargs)
   
 class ContactView(FormView):
-    template_name = 'gourmetapp/contact.html'
+    template_name = 'gourmetphoto/contact.html'
     form_class = ContactForm
-    success_url = reverse_lazy('gourmetapp:contact')
+    success_url = reverse_lazy('gourmetphoto:contact')
 
     def form_valid(self, form):
         name = form.cleaned_data['name']
