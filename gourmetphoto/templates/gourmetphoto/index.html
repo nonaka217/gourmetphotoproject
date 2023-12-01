@@ -1,0 +1,7 @@
+{% extends 'gourmetphoto/base.html' %}
+{% block title %}Gourmet Gallery{% endblock %}
+    {% block contents %}
+    {% include "gourmetphoto/photos_title.html" %}
+    {% include "gourmetphoto/photos_list.html" %}
+    {% include "gourmetphoto/pagination.html" %}
+    {% endblock %}
