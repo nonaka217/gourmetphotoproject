@@ -46,11 +46,11 @@
                 <li><a href="{% url 'gourmetphoto:mypage' %}" class="text-white">マイページ</a></li>
                 <li><a href="{% url 'gourmetphotoaccounts:logout' %}" class="text-white">ログアウト</a></li>
                 <li><a href="{% url 'password_reset' %}" class="text-white">パスワードのリセット</a></li>
-                <li><a href="mailto:admin@example.com" class="text-white">Email me</a></li>
+                <li class="nav-item"><a href="{% url 'gourmetphoto:contact' %}">お問い合わせ</a></li>
                 {% else %}
                 <li><a href="{% url 'gourmetphotoaccounts:signup' %}" class="text-white">サインアップ</a></li>
                 <li><a href="{% url 'gourmetphotoaccounts:login' %}" class="text-white">ログイン</a></li>
-                <li><a href="mailto:admin@example.com" class="text-white">Email me</a></li>
+                <li class="nav-item"><a href="{% url 'gourmetphoto:contact' %}">お問い合わせ</a></li>
                 {% endif %}
               </ul>
             </div>
